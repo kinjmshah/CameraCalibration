@@ -173,7 +173,8 @@ def stereoCalib_2cam(folder1,folder2):
 
     return errorAll1, errorAll2, avgError1, avgError2, idxStore
 
-if __name__ == "__main__":
+def main():
+
     print('############### Data Set 1 #########################\n')
     folder = 'RGB'
     imagesAllFileNames,folderPath = getFileNames(folder)
@@ -273,3 +274,5 @@ if __name__ == "__main__":
     plt.ylabel('Re-Projection Error')
     fig.savefig('DataSet3_IR')
 
+if __name__ == "__main__":
+    main()
