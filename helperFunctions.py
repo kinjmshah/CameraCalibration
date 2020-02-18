@@ -69,7 +69,7 @@ def findCorners(folderName):
     # read in image file names
     imagesAllFileNames,folderPath = getFileNames(folderName)
     imagesAllFileNames.sort()
-    print(imagesAllFileNames)
+    #print(imagesAllFileNames)
 
     for fileName in imagesAllFileNames:
         filePath = folderPath + '/' + fileName
