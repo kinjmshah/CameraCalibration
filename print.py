@@ -57,7 +57,6 @@ def evaluateImages(folderName):
     # read in image file names
     imagesAllFileNames,folderPath = getFileNames(folderName)
     imagesAllFileNames.sort()
-    print(imagesAllFileNames)
 
     for fileName in imagesAllFileNames:
         filePath = folderPath + '/' + fileName
@@ -84,7 +83,6 @@ def evaluateImages(folderName):
             # store image coordinates
             imagePoints.append(imgCorners)
         else:
-            print('Pattern not found for ',fileName)
             failCount += 1
 
     imgShape = grayScale.shape
@@ -118,7 +116,6 @@ def singleCamCalibration(folderName):
     print('Distortion Coefficients: \n',distCoeff)
     # reprojection error
     errorAll,avgError = reProjectionError(objectPoints,imagePoints,rotVec,transVec,camMtx,distCoeff)
-    print('All Error: \n',errorAll)
     return camMtx,avgError,distCoeff,objectPoints,imagePoints,imgShape,objectPointsOriginal,failCount,errorAll,rotVec,transVec
 
 
