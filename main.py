@@ -64,22 +64,22 @@ def stereoCamera(folder1,folder2):
 
 def main():
     dataSet = sys.argv[1]
-
-    if dataSet == 1:
+    print(type(dataSet))
+    if dataSet == '1':
         folder = 'RGB'
         singleCamera(folder)
 
-    elif dataSet == 2:
+    elif dataSet == '2':
         folder1 = '2-Intel/RGB'
         folder2 = '2-Intel/IR'
         error1,error2,success1,success2,avgError1,avgError2 = stereoCamera(folder1,folder2)
 
-    elif dataSet == 3:
+    elif dataSet == '3':
         folder1 = '3-Kinect2/RGB'
         folder2 = '3-Kinect2/IR'
         error1,error2,success1,success2,avgError1,avgError2 = stereoCamera(folder1,folder2)
     else:
-        error('Please enter a valid data set number')
+        print('please enter valid value')
     return 0
 
 if __name__ == "__main__":

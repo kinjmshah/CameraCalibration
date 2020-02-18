@@ -1,2 +1,5 @@
 *.DS_store
 *.swp
+__pycache__/
+*.pyc
+

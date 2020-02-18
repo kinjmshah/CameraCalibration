@@ -40,7 +40,7 @@ def reProjectionError(objectPoints,imagePoints,rotVec,transVec,camMtx,distCoeff)
 
 # finds the corners for a single dataset
 def findCorners(folderName):
-
+    termCond = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
     row = 6
     col = 7
     # initialize object points array
@@ -65,7 +65,7 @@ def findCorners(folderName):
     objectPoints = [] #3D
     imagePoints = [] #2D
     failFile = []
-    sucess = []
+    success = []
     # read in image file names
     imagesAllFileNames,folderPath = getFileNames(folderName)
     imagesAllFileNames.sort()
@@ -84,7 +84,7 @@ def findCorners(folderName):
 
         # if pattern was found execute below
         if retval == True:
-            sucess.append()
+            success.append(fileName)
             # store the object points
             objectPoints.append(objPoint_singleImage)
 
