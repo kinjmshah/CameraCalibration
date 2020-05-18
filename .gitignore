@@ -2,4 +2,6 @@
 *.swp
 __pycache__/
 *.pyc
-
+*.png
+*.m
+*.zip
