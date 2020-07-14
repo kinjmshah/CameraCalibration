@@ -1,4 +1,4 @@
-# Augmented Reality Assignment 2
+# Camera Calibration
 
 For Single Camera Calibration:
 1. Take pictures of checkerboard placed in different locations with respect to the camera 15 to 20 times and place in folder called `singleCamCalib`
